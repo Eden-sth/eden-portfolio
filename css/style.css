@@ -1,0 +1,906 @@
+@charset "UTF-8";
+/*Jersey 25*/
+@import url("https://fonts.googleapis.com/css2?family=Jersey+25&display=swap");
+
+@font-face {
+  font-family: "NeoDunggeunmo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PFStardust";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  text-align: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: #f0f0f0;
+  line-height: normal;
+}
+ul,
+li {
+  list-style: none;
+}
+
+/* p {
+  line-height: 1.7;
+} */
+
+/* .bg {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh;
+ background: linear-gradient(to bottom, #79695d, #d5edeb);
+} */
+
+/* 마우스 커서 */
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+}
+
+/* 로딩화면 글자 각 글자마다 위 아래로 퍼지는 효과 실패.. */
+/* .loading {
+  display: flex;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #37db69;
+  z-index: 2;
+  overflow: hidden;
+} */
+/* .loading > span {
+  display: block;
+  flex-direction: column;
+  line-height: 1;
+  transform: translateY(-100%);
+} */
+/* .loading > span:nth-of-type(2n) {
+  transform: translateY(100%);
+} */
+
+.header {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  margin: 3px;
+}
+.header ul {
+}
+
+/* 헤더 각 버튼 요소 */
+.header ul > li {
+  padding: 0.248rem;
+  width: 100%;
+  position: relative;
+  border-radius: 50px;
+  /* background-color: #39eed6; */
+  border: 4.3px solid #efe174;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  margin-top: 1rem;
+  /* 여기서부터 추가요소 아래로...(나중 삭제할수도) */
+  backdrop-filter: blur(13px);
+  /* background-color: #e6e6e6; */
+  /* box-shadow: 28px 28px 50px rgba(13, 39, 80, 0.16), -23px -23px 45px #fff; */
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+/* section 구간 */
+.main-page {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: #cfb7ab;
+}
+/* ???? */
+.main-page::after {
+  width: 100%;
+  background-size: contain;
+  position: absolute;
+  inset: 0;
+}
+.main-page .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 2;
+  width: 100%;
+  font-size: 7rem;
+  line-height: 1.2;
+  font-family: "Jersey 25";
+  margin-bottom: 2rem;
+  color: #f7f88d;
+}
+
+/* ???? */
+.main-page > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.main-page > div .cloud-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-page > div > ul > li {
+  position: absolute;
+  animation: bounceY 1s infinite linear;
+}
+.main-page > div > ul > li:nth-child(1) {
+  width: 41%;
+  height: auto;
+  /* translate: 6rem 19rem; */
+  position: absolute;
+  top: 2rem;
+  left: 4.4rem;
+}
+.main-page > div > ul > li:nth-child(2) {
+  width: 45%;
+  height: auto;
+  position: absolute;
+  top: 3.4em;
+  left: 60.4rem;
+  /* translate: 48rem 1rem; */
+}
+.main-page > div > ul > li:nth-child(3) {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 31em;
+  left: 57.4rem;
+  /* translate: -1rem 46rem; */
+}
+.main-page > div > ul > li:nth-child(4) {
+  width: 17%;
+  height: auto;
+  position: absolute;
+  top: 38em;
+  left: 28.6rem;
+  /* translate: 63rem 31rem; */
+}
+.main-page > div > ul > li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main-page > div > ul > li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.page-1 {
+  background: #7b7986;
+  display: block;
+  margin: 0;
+  flex: auto;
+  /* ↓ 페이지1영역 구분 */
+  /* border: 2.5px solid #39eed6; */
+  /* margin: 5px; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  color: #ece1e0;
+  font-family: "Jersey 25";
+}
+
+.Eden-parent {
+  position: relative;
+  /* width: 100%;
+  height: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  gap: 1.8rem;
+  padding: 0rem;
+}
+
+.Eden-parent > .Eden-detail {
+  /* position: absolute; */
+  /* width: 25%; */
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 2.8rem;
+  /* position: relative;
+  top: 42px;
+  left: 71px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "jersey 20"; */
+}
+.Eden-parent > .Eden-detail > h1 {
+  /* align-self: stretch; */
+  position: relative;
+  font-size: 5.6rem;
+}
+.Eden-parent > .Eden-detail > a {
+  /* align-self: stretch; */
+  position: relative;
+  border-radius: 400px;
+  /* max-width: 100%; */
+  /* height: 450px; */
+  overflow: hidden;
+  flex-shrink: 1;
+  object-fit: cover;
+}
+.Eden-parent > .Eden-detail > .info {
+  gap: 23px;
+}
+.Eden-detail > .info > .name {
+  font-size: 3.9rem;
+}
+.Eden-detail > .info > .info-detail {
+  font-size: 1.4rem;
+  color: #ece1e0;
+  font-family: "Jersey 25";
+  margin-top: 10px;
+}
+.Rightbx {
+  flex: 2;
+  width: auto;
+  display: flex;
+  gap: 2.8rem;
+  min-width: 0;
+  font-size: 2.4rem;
+  /* padding-left: 20px; */
+  /* padding-top: 18px; */
+}
+.Rightbx > .right-area1,
+.right-area2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.75rem;
+  /* ↑ 라이센스 other skill 상하 위치 조절 */
+  flex: 1;
+  /* 글자 줄 맞춤땜에 */
+  /* padding-top: 28px; */
+  margin-top: 29px;
+}
+.right-area1 > h1 {
+}
+.education {
+  flex: 1;
+  /* border: 4px solid #f0ff83; */
+}
+/* education 메인 제목 */
+.education h1 {
+  font-family: "Jersey 25";
+  color: #ece1e0;
+  font-size: 3.4rem;
+}
+.education ul li {
+  /* font-family: "NeoDunggeunmo Code"; */
+  font-family: "DungGeunMo";
+  /* font-family: "PFStardust"; */
+  font-size: 2.1rem;
+}
+.education span {
+  font-size: 1.7rem;
+  font-family: "Jersey 25";
+  display: flex;
+  flex-direction: column;
+}
+.license {
+  flex: 1;
+  /* padding: 12px; */
+  /* border: 4px solid #f0ff83; */
+}
+/* license 메인 제목 */
+.license h1 {
+  font-family: "Jersey 25";
+  color: #ece1e0;
+  font-size: 3.4rem;
+}
+.license li {
+  font-family: "Jersey 20";
+  font-size: 2.17rem;
+}
+.license span {
+  font-size: 1.7rem;
+  font-family: "Jersey 25";
+  display: flex;
+  flex-direction: column;
+}
+
+.sofware-list {
+  position: relative;
+  flex: 1;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid #ece1e0;
+  width: 482px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sofware-list h1 {
+  /* position: relative; */
+  font-size: 3.4rem;
+}
+.sofware-list h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 17%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ece1e0;
+  margin-top: 1.3rem;
+}
+.sofware-list div {
+  margin-bottom: 0.45rem;
+}
+
+.sofware-list > div > .list-item {
+  font-size: 1px;
+}
+
+.figma {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.figma-gauge-bx {
+  position: relative;
+  left: 4.2rem;
+  width: 10rem;
+  height: 1.3rem;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #ece1e0;
+}
+.f-gauge {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  background-color: #cfb7ab;
+  border-radius: 1.5rem;
+}
+.Illustrator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.illustrator-gauge-bx {
+  position: relative;
+  width: 10rem;
+  height: 1.3rem;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #ece1e0;
+}
+.i-gauge {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color: #cfb7ab;
+  border-radius: 1.5rem;
+}
+.Photoshop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.photoshop-gauge-bx {
+  position: relative;
+  width: 10rem;
+  height: 1.3rem;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #ece1e0;
+}
+.p-gauge {
+  position: relative;
+  width: 52.4%;
+  height: 100%;
+  background-color: #cfb7ab;
+  border-radius: 1.5rem;
+}
+
+.right-area2 > .other-skill {
+  /* flex: 1; */
+  /* padding: 20px; */
+  /* border: 4px solid #f0ff83; */
+}
+.other-skill {
+  /* padding: 23px; */
+  flex: 1;
+  padding: 12px;
+}
+
+/* .page-2 {
+  background: #7b7986;
+  flex: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  margin: 0;
+} */
+/* .page-2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color: #ece1e0;
+  font-family: "Jersey 20";
+} */
+
+.page-3 {
+  background: #7b7986;
+  font: #ddd;
+  display: block;
+  /* flex: auto; */
+  /* border: 2.5px solid #7c29c0; */
+  margin: 0;
+  width: 100%;
+  height: 1080px;
+  position: relative;
+}
+
+/* runcanvas 앱 화면 부분 */
+.page-3 ul {
+  position: relative;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+.page-3 ul > li {
+  margin-top: 24px;
+  position: absolute;
+  /* float: left; */
+  width: 50%;
+  top: 3px;
+  left: 12px;
+}
+.page-3 ul > li:nth-child(2) {
+  top: 71px;
+  left: 113px;
+  opacity: 0;
+}
+.page-3 ul:hover > li:nth-child(2) {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.page-3 div {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "NeoDunggeunmo";
+  /* justify-content: flex-start; */
+}
+.page-3 .runcanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: left;
+}
+.runcanvas > ul {
+  position: relative;
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* width: 300px; */
+}
+.runcanvas > div {
+  position: relative;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  /* top: 5px; */
+  line-height: 1.6;
+  gap: 20px;
+  padding: 5rem;
+}
+.runcanvas-T {
+  /* display: flex; */
+}
+.runcanvas-T h1 {
+  color: #f7f88d;
+  font-size: 58px;
+  font-family: "Jersey 25", sans-serif;
+  margin-bottom: 10px;
+}
+.runcanvas-abt {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* margin-top: 12px; */
+}
+.runcanvas-abt span:nth-child(1)::after {
+  content: "";
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 25px;
+  width: 3px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+.runcanvas-abt .bar-container {
+  width: 100px;
+  height: 15px;
+  background: #fff;
+}
+.bar-fill {
+  width: 37.6%;
+  height: 100%;
+  background: #c4a992;
+}
+.page-3 .runcanvas-info {
+  position: relative;
+  margin-bottom: 2.7rem;
+}
+.runcanvas .button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 31px;
+  font-size: 20px;
+}
+
+.runcanvas .button-group a {
+  border-radius: 25px;
+  padding: 10px 15px;
+  border: 3px solid #ffffff;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+/* (위에 임시 코드 작성...) 복구 예정 */
+/* .runcanvas .button-group div {
+  border-radius: 25px;
+  padding: 10px 15px;
+  border: 3px solid #ffffff;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+} */
+/* margin: 7px; */
+
+/* -----------------------------page-4 영역--------------------------- */
+#page-4 {
+  background: #d3bcb0;
+  margin: 0;
+  height: 1080px;
+}
+#page-4 > h2 {
+  font-size: 4.5rem;
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 800;
+  color: #fdfd7a;
+  margin-bottom: 0.6rem;
+  text-align: left;
+  display: flex;
+  padding: 2.1rem;
+}
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  /* align-content: center; */
+  /*flex-wrap: wrap;*/
+  /*이것때문에 갭이 옆으로 안가고 상하로 벌려짐*/
+  gap: 4rem;
+  padding: 2rem;
+}
+.card-wrapper .card1,
+.card-wrapper .card2 {
+  position: relative;
+  /* flex: 1; */
+  width: 600px;
+  padding: 20px;
+}
+.card-wrapper .card1 .card-box,
+.card-wrapper .card2 .card-box {
+  /* width: 300px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 27px;
+  box-shadow: 5px 5px 10px #00000026;
+  border: 5px solid #ffffffdd;
+}
+
+/*원본 리디자인 박스 스타일*/
+.card-wrapper .card1 .card-labels,
+.card-wrapper .card2 .card-labels {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.card-wrapper .card1 .card-labels > div,
+.card-wrapper .card2 .card-labels > div {
+  background: #e4d8c8;
+  width: 0.25rem;
+  height: 2.5rem;
+  border-radius: 10rem;
+  margin: 0.5rem;
+}
+.card1 .card-labels .label {
+  border: 3.5px solid #e4d8c8;
+  border-radius: 32px;
+  padding: 0.8rem 1.1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #f7f88d;
+}
+.card1 .card-labels .progress {
+  color: #fdfd7a;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* card2 부분 */
+.card2 .card-box {
+}
+.card2 p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #da4315;
+}
+.card2 .card-labels .label {
+  border: 3.5px solid #e4d8c8;
+  border-radius: 32px;
+  padding: 0.8rem 1.1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #f7f88d;
+}
+.card2 .card-labels .progress {
+  color: #fdfd7a;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------- */
+/*page05 영역 or 섹션 5- Design 영역*/
+#page-5 {
+  /* background: #8B8C8E; */
+  background: #7a7a7a;
+  /* display: block; */
+  width: 100%;
+  height: 100vh;
+  /* height:1080px; */
+  text-align: left;
+  font-family: "Pretendard", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 200px;
+}
+#page-5 > div {
+  padding: 2.1rem;
+}
+
+#page-5 > div > h1 {
+  font-size: 4.5rem;
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.6rem;
+  /* text-align: left; */
+}
+
+#page-5 > div .underline {
+  width: 200px;
+  height: 6px;
+  background: linear-gradient(to right, #b0b0b0, #fdfd7a);
+  border-radius: 10px;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  margin-top: 10px;
+}
+
+#page-5 .design-gallery {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 4rem;
+  /* 잠깐 정지 */
+  /* animation: scroll-left 30s linear infinite; */
+  justify-content: flex-start;
+}
+
+#page-5 .design-gallery a {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+#page-5 .design-gallery a img {
+  border-radius: 20px;
+  width: 406px;
+  height: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 기존 꺼 img a 해보고 안되면 다시 원상복구 예정 */
+/* #page-5 .design-gallery img {
+  width: 367px;
+  height: 327px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+} */
+
+/* 무한 스크롤 키프레임 */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ---------------final-page 영역---------------------*/
+#final-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* padding-top: 166px; */
+  flex-direction: column;
+  gap: 0px;
+  /* background: #3f3232; */
+  background: #222222;
+}
+
+#final-page h2 {
+  text-transform: uppercase;
+  font-size: 97px;
+  /* padding: 30px; */
+}
+#final-page div {
+  color: #fff;
+  font-family: "Jersey 25";
+}
+.section-up {
+  margin-top: 177px;
+}
+.section-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 116px;
+  /* margin-bottom: 80px; */
+}
+#final-page .section-bottom span {
+  font-size: 34px;
+  margin-bottom: 15px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+}
+#final-page .section-bottom span:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+#final-page .section-bottom span p {
+  color: #da4315;
+  font-family: "Jersey 20";
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+  /* justify-content: center; */
+}
+
+/* --------------------------------------------------- */
+
+/* .footer {
+  background: #0e0c0c;
+  width: 100%;
+  height: 7rem;
+  position: relative;
+  display: flex;
+} */
+
+/* 메인페이지 구름 png 애니메이션 */
+@keyframes bounceY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  75% {
+    transform: translateY(4px);
+  }
+}
+
+/* 마지막 페이지 이미지 요소 흔들 효과 */
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
