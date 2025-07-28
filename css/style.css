@@ -109,15 +109,15 @@ li {
   width: 100%;
   position: relative;
   border-radius: 50px;
-  /* background-color: #39eed6; */
-  border: 4.3px solid #efe174;
+  /* border: 4.3px solid #efe174; */
+  border: 3.2px solid #e6e6e6;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
   margin-top: 1rem;
   /* 여기서부터 추가요소 아래로...(나중 삭제할수도) */
   backdrop-filter: blur(13px);
-  /* background-color: #e6e6e6; */
+
   /* box-shadow: 28px 28px 50px rgba(13, 39, 80, 0.16), -23px -23px 45px #fff; */
 }
 
@@ -636,30 +636,31 @@ li {
   font-size: 4.5rem;
   font-family: "Jersey 25", sans-serif;
   font-weight: 800;
-  color: #524439;
-  margin-bottom: 0.6rem;
+  color: #fdfd7a;
   text-align: left;
   display: flex;
-  padding: 2.1rem;
+  padding: 33.6px;
+  margin-bottom: 4.6px;
 }
 .card-wrapper {
   position: relative;
   width: 100%;
   display: flex;
+  max-width: auto;
   /* justify-content: space-between; */
   justify-content: center;
   /* align-content: center; */
   /*flex-wrap: wrap;*/
   /*이것때문에 갭이 옆으로 안가고 상하로 벌려짐*/
-  gap: 4rem;
-  padding: 2rem;
+  gap: 106px;
+  padding-top: 35px;
 }
 .card-wrapper .card1,
 .card-wrapper .card2 {
   position: relative;
   /* flex: 1; */
-  width: 600px;
-  padding: 20px;
+  width: 702px;
+  /* padding: 20px; */
 }
 .card-wrapper .card1 .card-box,
 .card-wrapper .card2 .card-box {
@@ -686,19 +687,19 @@ li {
 }
 .card-wrapper .card1 .card-labels > div,
 .card-wrapper .card2 .card-labels > div {
-  background: #ffffff;
+  background: #e4d8c8;
   width: 0.25rem;
   height: 2.5rem;
   border-radius: 10rem;
   margin: 0.5rem;
 }
 .card1 .card-labels .label {
-  border: 3.5px solid #ffffff;
+  border: 3.5px solid #e4d8c8;
   border-radius: 32px;
   padding: 0.8rem 1.1rem;
   font-size: 1.4rem;
-  font-weight: bold;
-  color: #524439;
+  font-weight: 500;
+  color: #f7f88d;
 }
 .card1 .card-labels .progress {
   color: #fdfd7a;
@@ -709,11 +710,16 @@ li {
 /* card2 부분 */
 .card2 .card-box {
 }
-.card2 p {
-  font-size: 1.4rem;
+
+/* font-size: 1.4rem; */
+/* card2 카드박스랑 글자영역 겹치기 */
+.card2 .card-box p {
+  position: absolute;
+  font-size: 43px;
   font-weight: 600;
   color: #da4315;
 }
+
 .card2 .card-labels .label {
   border: 3.5px solid #e4d8c8;
   border-radius: 32px;
@@ -722,6 +728,16 @@ li {
   font-weight: 500;
   color: #f7f88d;
 }
+.card1 .card-labels a {
+  border: 3.5px solid #e4d8c8;
+  border-radius: 32px;
+  padding: 0.8rem 1.1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #f7f88d;
+  text-decoration: none;
+}
+
 .card2 .card-labels .progress {
   color: #fdfd7a;
   font-size: 1rem;
@@ -757,7 +773,6 @@ li {
   /* text-align: left; */
 }
 
-/* ↓ 지울까말까 고민중 */
 #page-5 > div .underline {
   width: 200px;
   height: 6px;
@@ -776,10 +791,20 @@ li {
 #page-5 .design-gallery {
   display: flex;
   /* flex-wrap: wrap; */
-  gap: 3rem;
-  /* ↓ 갤러리 애니메이션 잠깐 정지 */
-  animation: scroll-left 16s linear infinite;
+  gap: 4rem;
+  /* 잠깐 정지 */
+  animation: scroll-left 32s linear infinite;
   justify-content: flex-start;
+}
+
+/* ↓ 끊김 없는 화면 무한스크롤 재현 (근데 별 차이가 없는...) */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 #page-5 .design-gallery a {
@@ -788,9 +813,9 @@ li {
 }
 #page-5 .design-gallery a img {
   border-radius: 20px;
-  /* width: 406px; */
   width: auto;
-  height: 315px;
+  height: 345px;
+  /* height: auto; */
   object-fit: cover;
 }
 
@@ -852,10 +877,11 @@ li {
 #final-page .section-bottom span:nth-child(3) {
   display: flex;
   flex-direction: column;
+  margin-top: 35px;
 }
 
 #final-page .section-bottom span p {
-  color: #da4315;
+  /* color: #da4315; */
   font-family: "Jersey 20";
   display: flex;
   flex-direction: column;
