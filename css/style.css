@@ -130,7 +130,7 @@ li {
   height: 100%;
   width: 100%;
   position: relative;
-  background: #cfb7ab;
+  background: #71c0bb;
 }
 /* ???? */
 .main-page::after {
@@ -150,7 +150,7 @@ li {
   line-height: 1.2;
   font-family: "Jersey 25";
   margin-bottom: 2rem;
-  color: #f7f88d;
+  color: #332d56;
 }
 
 /* ???? */
@@ -217,7 +217,7 @@ li {
 }
 
 .page-1 {
-  background: #7b7986;
+  background: #648db3;
   display: block;
   margin: 0;
   flex: auto;
@@ -229,7 +229,7 @@ li {
   position: relative;
   overflow: hidden;
   text-align: left;
-  color: #ece1e0;
+  color: #ffeaea;
   font-family: "Jersey 25";
 }
 
@@ -287,7 +287,7 @@ li {
 }
 .Eden-detail > .info > .info-detail {
   font-size: 1.4rem;
-  color: #ece1e0;
+  color: #ffeaea;
   font-family: "Jersey 25";
   margin-top: 10px;
 }
@@ -322,7 +322,7 @@ li {
 /* education 메인 제목 */
 .education h1 {
   font-family: "Jersey 25";
-  color: #ece1e0;
+  color: #ffeaea;
   font-size: 3.4rem;
 }
 .education ul li {
@@ -345,7 +345,7 @@ li {
 /* license 메인 제목 */
 .license h1 {
   font-family: "Jersey 25";
-  color: #ece1e0;
+  color: #ffeaea;
   font-size: 3.4rem;
 }
 .license li {
@@ -365,7 +365,7 @@ li {
   padding: 15px;
   box-sizing: border-box;
   border-radius: 25px;
-  border: 4px solid #ece1e0;
+  border: 4px solid #ffeaea;
   width: 482px;
   display: flex;
   flex-direction: column;
@@ -384,7 +384,7 @@ li {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #ece1e0;
+  background-color: #ffeaea;
   margin-top: 1.3rem;
 }
 .sofware-list div {
@@ -408,13 +408,13 @@ li {
   height: 1.3rem;
   border-radius: 15px;
   overflow: hidden;
-  border: 3px solid #ece1e0;
+  border: 3px solid #ffeaea;
 }
 .f-gauge {
   position: relative;
   width: 80%;
   height: 100%;
-  background-color: #cfb7ab;
+  background-color: #ffeaea;
   border-radius: 1.5rem;
 }
 .Illustrator {
@@ -429,13 +429,13 @@ li {
   height: 1.3rem;
   border-radius: 15px;
   overflow: hidden;
-  border: 3px solid #ece1e0;
+  border: 3px solid #ffeaea;
 }
 .i-gauge {
   position: relative;
   width: 60%;
   height: 100%;
-  background-color: #cfb7ab;
+  background-color: #ffeaea;
   border-radius: 1.5rem;
 }
 .Photoshop {
@@ -450,13 +450,13 @@ li {
   height: 1.3rem;
   border-radius: 15px;
   overflow: hidden;
-  border: 3px solid #ece1e0;
+  border: 3px solid #ffeaea;
 }
 .p-gauge {
   position: relative;
   width: 52.4%;
   height: 100%;
-  background-color: #cfb7ab;
+  background-color: #ffeaea;
   border-radius: 1.5rem;
 }
 
@@ -489,7 +489,7 @@ li {
 } */
 
 .page-3 {
-  background: #7b7986;
+  background: #b2d8ce;
   font: #ddd;
   display: block;
   /* flex: auto; */
@@ -525,9 +525,9 @@ li {
 }
 .page-3 div {
   position: relative;
-  color: #fff;
+  color: #332d56;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "NeoDunggeunmo";
   /* justify-content: flex-start; */
 }
@@ -560,7 +560,7 @@ li {
   /* display: flex; */
 }
 .runcanvas-T h1 {
-  color: #f7f88d;
+  color: #5459ac;
   font-size: 58px;
   font-family: "Jersey 25", sans-serif;
   margin-bottom: 10px;
@@ -575,7 +575,7 @@ li {
 .runcanvas-abt span:nth-child(1)::after {
   content: "";
   display: inline-block;
-  background: #ffffff;
+  background: #5459ac;
   border-radius: 25px;
   width: 3px;
   height: 20px;
@@ -591,7 +591,7 @@ li {
 .bar-fill {
   width: 37.6%;
   height: 100%;
-  background: #c4a992;
+  background: #648db3;
 }
 .page-3 .runcanvas-info {
   position: relative;
@@ -607,12 +607,12 @@ li {
 .runcanvas .button-group a {
   border-radius: 25px;
   padding: 10px 15px;
-  border: 3px solid #ffffff;
+  border: 3px solid #648db3;
   border-radius: 16px;
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
-  color: #f1f1f1;
+  color: #5459ac;
 }
 
 /* (위에 임시 코드 작성...) 복구 예정 */
@@ -628,7 +628,7 @@ li {
 
 /* -----------------------------page-4 영역--------------------------- */
 #page-4 {
-  background: #d3bcb0;
+  background: #71c0bb;
   margin: 0;
   height: 1080px;
 }
@@ -636,7 +636,7 @@ li {
   font-size: 4.5rem;
   font-family: "Jersey 25", sans-serif;
   font-weight: 800;
-  color: #fdfd7a;
+  color: #f9f3ef;
   text-align: left;
   display: flex;
   padding: 33.6px;
@@ -649,7 +649,7 @@ li {
   max-width: auto;
   /* justify-content: space-between; */
   justify-content: center;
-  /* align-content: center; */
+  /* align-content:  center; */
   /*flex-wrap: wrap;*/
   /*이것때문에 갭이 옆으로 안가고 상하로 벌려짐*/
   gap: 106px;
@@ -672,7 +672,7 @@ li {
   overflow: hidden;
   border-radius: 27px;
   box-shadow: 5px 5px 10px #00000026;
-  border: 5px solid #ffffffdd;
+  border: 4.6px solid #ffffffdd;
 }
 
 /*원본 리디자인 박스 스타일*/
@@ -699,29 +699,34 @@ li {
   padding: 0.8rem 1.1rem;
   font-size: 1.4rem;
   font-weight: 500;
-  color: #f7f88d;
+  color: #f9f3ef;
 }
 
 .card1 .card-labels .progress,
 .card2 .card-labels .progress {
-  color: #fdfd7a;
+  color: #f9f3ef;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .card1 .card-labels a,
 .card2 .card-labels a {
-  border: 3.5px solid #e4d8c8;
+  border: 3.5px solid #f9f3ef;
   border-radius: 32px;
   padding: 0.8rem 1.1rem;
   font-size: 1.4rem;
   font-weight: 500;
-  color: #f7f88d;
+  color: #f9f3ef;
   text-decoration: none;
 }
 
 /* card2 부분 */
 .card2 .card-box {
+}
+
+.card2 .card-box img {
+  filter: blur(8px);
+  /* 필요시 width, height, object-fit 등도 추가 */
 }
 
 /* font-size: 1.4rem; */
@@ -730,14 +735,15 @@ li {
   position: absolute;
   font-size: 43px;
   font-weight: 600;
-  color: #da4315;
+  color: #f0ff83;
+  /* background: #ddddddc9; */
 }
 
 /* ---------------------------------------------- */
 /*page05 영역 or 섹션 5- Design 영역*/
 #page-5 {
   /* background: #8B8C8E; */
-  background: #7a7a7a;
+  background: #71c0bb;
   /* display: block; */
   width: 100%;
   height: 100vh;
@@ -828,7 +834,7 @@ li {
   flex-direction: column;
   gap: 0px;
   /* background: #3f3232; */
-  background: #222222;
+  background: #332d56;
 }
 
 #final-page h2 {
@@ -837,7 +843,7 @@ li {
   /* padding: 30px; */
 }
 #final-page div {
-  color: #fff;
+  color: #ffeaea;
   font-family: "Jersey 25";
 }
 .section-up {
