@@ -630,10 +630,11 @@ li {
 #page-4 {
   background: #71c0bb;
   margin: 0;
-  height: 1080px;
+  /* height: 910px; */
+  height: 100vh;
 }
 #page-4 > h2 {
-  font-size: 4.5rem;
+  font-size: 80px;
   font-family: "Jersey 25", sans-serif;
   font-weight: 800;
   color: #f9f3ef;
@@ -646,25 +647,28 @@ li {
   position: relative;
   width: 100%;
   display: flex;
-  max-width: auto;
+  /* max-width: auto; */
   /* justify-content: space-between; */
   justify-content: center;
   /* align-content:  center; */
-  /*flex-wrap: wrap;*/
+  /* flex-wrap: wrap; */
   /*이것때문에 갭이 옆으로 안가고 상하로 벌려짐*/
-  gap: 106px;
-  padding-top: 35px;
+  gap: 75px;
+  padding-top: 143px;
 }
 .card-wrapper .card1,
-.card-wrapper .card2 {
+.card-wrapper .card2,
+.card-wrapper .card3 {
   position: relative;
   /* flex: 1; */
-  width: 702px;
+  width: 536px;
   /* padding: 20px; */
 }
 .card-wrapper .card1 .card-box,
-.card-wrapper .card2 .card-box {
-  /* width: 300px; */
+.card-wrapper .card2 .card-box,
+.card-wrapper .card3 .card-box {
+  width: auto;
+  height: 380px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -675,9 +679,10 @@ li {
   border: 4.6px solid #ffffffdd;
 }
 
-/*원본 리디자인 박스 스타일*/
+/*원본+리디자인 버튼 박스 스타일*/
 .card-wrapper .card1 .card-labels,
-.card-wrapper .card2 .card-labels {
+.card-wrapper .card2 .card-labels,
+.card-wrapper .card3 .card-labels {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -686,7 +691,8 @@ li {
   flex-wrap: wrap;
 }
 .card-wrapper .card1 .card-labels > div,
-.card-wrapper .card2 .card-labels > div {
+.card-wrapper .card2 .card-labels > div,
+.card-wrapper .card3 .card-labels > div {
   background: #e4d8c8;
   width: 0.25rem;
   height: 2.5rem;
@@ -703,14 +709,16 @@ li {
 }
 
 .card1 .card-labels .progress,
-.card2 .card-labels .progress {
+.card2 .card-labels .progress,
+.card3 .card-labels .progress {
   color: #f9f3ef;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .card1 .card-labels a,
-.card2 .card-labels a {
+.card2 .card-labels a,
+.card3 .card-labels a {
   border: 3.5px solid #f9f3ef;
   border-radius: 32px;
   padding: 0.8rem 1.1rem;
@@ -722,21 +730,6 @@ li {
 
 /* card2 부분 */
 .card2 .card-box {
-}
-
-.card2 .card-box img {
-  filter: blur(8px);
-  /* 필요시 width, height, object-fit 등도 추가 */
-}
-
-/* font-size: 1.4rem; */
-/* card2 카드박스랑 글자영역 겹치기 */
-.card2 .card-box p {
-  position: absolute;
-  font-size: 43px;
-  font-weight: 600;
-  color: #f0ff83;
-  /* background: #ddddddc9; */
 }
 
 /* ---------------------------------------------- */
@@ -753,7 +746,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 200px;
+  padding-bottom: 162px;
 }
 #page-5 > div {
   padding: 2.1rem;
@@ -802,7 +795,7 @@ li {
 #page-5 .design-gallery a img {
   border-radius: 20px;
   width: auto;
-  height: 345px;
+  height: 396px;
   /* height: auto; */
   object-fit: cover;
 }
