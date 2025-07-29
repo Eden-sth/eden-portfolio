@@ -496,7 +496,8 @@ li {
   /* border: 2.5px solid #7c29c0; */
   margin: 0;
   width: 100%;
-  height: 1080px;
+  height: 100vh;
+  /* height: 1080px; */
   position: relative;
 }
 
@@ -544,6 +545,8 @@ li {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  top: 18px;
+  left: 29px;
   /* width: 300px; */
 }
 .runcanvas > div {
@@ -630,8 +633,9 @@ li {
 #page-4 {
   background: #71c0bb;
   margin: 0;
-  /* height: 910px; */
-  height: 100vh;
+  height: 910px;
+  padding: 0 40px;
+  /* height: 100vh; */
 }
 #page-4 > h2 {
   font-size: 80px;
@@ -661,7 +665,7 @@ li {
 .card-wrapper .card3 {
   position: relative;
   /* flex: 1; */
-  width: 536px;
+  /* width: 536px; */
   /* padding: 20px; */
 }
 .card-wrapper .card1 .card-box,
@@ -677,6 +681,15 @@ li {
   border-radius: 27px;
   box-shadow: 5px 5px 10px #00000026;
   border: 4.6px solid #ffffffdd;
+}
+
+.card-wrapper .card1 .card-box img,
+.card-wrapper .card2 .card-box img,
+.card-wrapper .card3 .card-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /*원본+리디자인 버튼 박스 스타일*/
@@ -730,6 +743,10 @@ li {
 
 /* card2 부분 */
 .card2 .card-box {
+}
+
+.card-wrapper .card2 .card-box img {
+  background-color: #000;
 }
 
 /* ---------------------------------------------- */
