@@ -18,7 +18,7 @@
     </div>
     <div style="text-align: left;">
     <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🧑‍💻 Contact me </h2> <br> 
-    <div align= "center"> <a href=> <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=Instagram&logoColor=white&link="> </a>
+    <div align= "center"> <a href="https://open.kakao.com/o/sv3L8SJh"> <img src="https://img.shields.io/badge/KakaoTalk-FFCD00?style=for-the-badge&logo=KakaoTalk&logoColor=000000"> </a>
          <a href=mailto:cseo99737@gmail.com> <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:"> </a>
          <a href="https://www.notion.so/Eden-s-2013103f3279808b8c49f6cbbc7a6172?source=copy_link"> <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white&link="> </a>
           </div>  <br> 
