@@ -796,6 +796,9 @@ li {
   animation: scroll-left 32s linear infinite;
   justify-content: flex-start;
 }
+#page-5 .design-gallery:hover {
+  animation-play-state: paused;
+}
 
 /* ↓ 끊김 없는 화면 무한스크롤 재현 (근데 별 차이가 없는...) */
 @keyframes scroll-left {
