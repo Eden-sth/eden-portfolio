@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+/* Common styles for tablets and mobile devices up to 1024px */
+@media (max-width: 1024px) {
+  /* Hide the fixed header on smaller devices to save space */
+  .header {
+    display: none;
+  }
+
+  /* Adjust body and main section to fit vertically */
+  html,
+  body,
+  .main {
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  /* Adjust the main page title for better readability */
+  .main-page .title {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+
+  /* Make the cloud list non-absolute and stack them */
+  .main-page > div > ul {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Adjust cloud images for mobile */
+  .main-page > div > ul > li {
+    position: relative;
+    width: 60%;
+    margin: 0;
+    left: auto;
+    top: auto;
+    animation: none;
+  }
+
+  /* Adjustments for the About Me section (page-1) */
+  .page-1 {
+    padding: 20px;
+    height: auto;
+  }
+
+  .Eden-parent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .Eden-detail {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .Eden-detail h1 {
+    font-size: 4rem;
+  }
+
+  .Eden-detail .info .name {
+    font-size: 3rem;
+  }
+
+  .Eden-detail .info .info-detail {
+    font-size: 1.2rem;
+  }
+
+  .Rightbx {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .right-area1,
+  .right-area2 {
+    width: 100%;
+    margin-top: 0;
+    gap: 20px;
+  }
+
+  .education h1,
+  .license h1,
+  .sofware-list h1 {
+    font-size: 2.5rem;
+  }
+
+  .education ul li,
+  .license li {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .education span,
+  .license span {
+    font-size: 1.2rem;
+  }
+
+  .sofware-list {
+    width: 100%;
+    padding: 15px;
+    gap: 1rem;
+  }
+
+  .sofware-list h1::after {
+    display: none;
+  }
+
+  .figma,
+  .Illustrator,
+  .Photoshop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .figma-gauge-bx,
+  .illustrator-gauge-bx,
+  .photoshop-gauge-bx {
+    width: 100%;
+    left: 0;
+  }
+
+  .other-skill {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .other-skill a img {
+    width: 50px;
+    height: auto;
+  }
+
+  /* Adjustments for the Projects section (page-3) */
+  .page-3 {
+    height: auto;
+    padding: 20px;
+  }
+
+  .runcanvas {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .runcanvas > ul {
+    width: 100%;
+    position: relative;
+    top: auto;
+    left: auto;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .runcanvas > ul > li {
+    position: static;
+    width: 100%;
+  }
+  
+  .runcanvas > ul > li:nth-child(2) {
+      top: auto;
+      left: auto;
+  }
+  
+  .runcanvas > div {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .runcanvas-T h1 {
+    font-size: 3rem;
+  }
+
+  .runcanvas-abt {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .runcanvas-abt span:nth-child(1)::after {
+    display: none;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Adjustments for the Coding section (page-4) */
+  #page-4 {
+    height: auto;
+    padding: 20px;
+  }
+
+  #page-4 h2 {
+    font-size: 3rem;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .card-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 20px;
+  }
+
+  .card-box {
+    height: 250px;
+  }
+
+  /* Adjustments for the Design section (page-5) */
+  #page-5 {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  #page-5 h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .marquee-wrapper {
+    padding: 0;
+  }
+
+  .design-gallery {
+    gap: 20px;
+    animation: scroll-left 15s linear infinite;
+  }
+
+  .design-gallery a img {
+    height: 180px;
+  }
+
+  /* Adjustments for the Final page */
+  #final-page {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  #final-page h2 {
+    font-size: 3rem;
+  }
+
+  .section-up {
+    margin-top: 30px;
+  }
+
+  .section-bottom {
+    margin-top: 50px;
+  }
+
+  #final-page .section-bottom span {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  #final-page .section-bottom span:nth-child(3) {
+    margin-top: 20px;
+  }
+}
+
+/* Specific styles for extra-small mobile devices up to 480px */
+@media (max-width: 480px) {
+    .main-page{
+        height: auto;
+        padding: 100px 20px;
+    }
+    .main-page > div > ul {
+        position: relative;
+        width: 80&;
+        top: auto;
+        left: auto;
+        margin-top: 20px;
+    }
+  .main-page .title {
+    font-size: 3rem;
+    /* line-height: 1.2; */
+    /* padding: 0 20px; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+  }
+
+    .Eden-detail img{
+    width: 300px;
+}
+    .Rightbx .right-area1 {
+        gap: 20px;
+    }.sofware-list {
+
+    }
+
+    .runcanvas-info {
+    font-size: 0.9rem;
+  }
+  .runcanvas .div{
+    line-height: none;
+  }
+  .runcanvas .button-group a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .card-box {
+    height: 180px;
+  }
+
+  .card-labels a {
+    font-size: 1.2rem;
+  }
+    #page-5 .design-gallery a img{
+        height: 250px;
+    }
+  #final-page h2 {
+    font-size: 2.5rem;
+  }
+}

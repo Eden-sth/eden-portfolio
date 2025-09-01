@@ -270,15 +270,13 @@ li {
   font-size: 5.6rem;
 }
 .Eden-parent > .Eden-detail > a {
-  /* align-self: stretch; */
   position: relative;
   border-radius: 400px;
-  /* max-width: 100%; */
-  /* height: 450px; */
   overflow: hidden;
   flex-shrink: 1;
   object-fit: cover;
-}
+} 
+
 .Eden-parent > .Eden-detail > .info {
   gap: 23px;
 }
