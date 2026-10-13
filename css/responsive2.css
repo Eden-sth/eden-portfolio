@@ -1,0 +1,429 @@
+@charset "UTF-8";
+
+/* =========================================================
+   responsive.css  (style.css 뒤에 로드되어야 함)
+   원칙
+   1) 고정 px/rem 좌표 → %, vw, clamp() 로 유동 처리
+   2) 100vh → 100dvh (모바일 주소창 높이 변동 대응)
+   3) 고정 height → min-height / auto
+   4) 데스크톱(1025px↑) 모습은 최대한 그대로 유지
+   ========================================================= */
+
+/* ---------- 0. 전역 (모든 화면 공통) ---------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+  height: auto;
+}
+body {
+  display: block; /* flex + height:100% 때문에 모바일에서 높이가 무너지던 부분 */
+  height: auto;
+  min-height: 100dvh;
+  overflow-x: clip; /* hidden 은 sticky(캐러셀)를 깨뜨릴 수 있어 clip 사용 */
+}
+.main {
+  width: 100%; /* 100vw 는 스크롤바 폭 때문에 가로 스크롤 유발 */
+}
+
+/* 로딩 화면: 모바일 주소창 대응 */
+#loading {
+  height: 100vh;
+  height: 100dvh;
+}
+#loading-screen {
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* 터치 기기에서는 마우스 커서 효과 제거 */
+@media (hover: none), (pointer: coarse) {
+  .circle {
+    display: none;
+  }
+}
+
+/* ---------- 1. 메인 페이지 (구름 위치를 % 로) ----------
+   기준: 1920 x 1080 디자인에서 기존 rem 좌표를 환산한 값 */
+.main-page {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 560px;
+  overflow: hidden;
+}
+.main-page .title {
+  font-size: clamp(3rem, 12vw, 7rem);
+  padding: 0 1rem;
+  word-break: keep-all;
+}
+.main-page > div > ul > li:nth-child(1) {
+  top: 3%;
+  left: 3.7%;
+}
+.main-page > div > ul > li:nth-child(2) {
+  top: 5%;
+  left: 50%;
+}
+.main-page > div > ul > li:nth-child(3) {
+  top: 46%;
+  left: 48%;
+}
+.main-page > div > ul > li:nth-child(4) {
+  top: 56%;
+  left: 24%;
+}
+
+/* 캐러셀 글자 크기 */
+.carousel div {
+  font-size: clamp(18px, 5vw, 30px);
+  padding: 8px clamp(16px, 4vw, 34px);
+}
+
+/* 디자인 갤러리: 3벌 복제된 구조에 맞게 -33.333% 로 이동 (끊김 방지) */
+#page-5 .design-gallery {
+  --gap: clamp(1rem, 3vw, 4rem);
+  gap: var(--gap);
+  padding-right: var(--gap);
+  flex: 0 0 auto;
+  animation-name: scroll-left-3;
+}
+#page-5 .design-gallery a img {
+  height: clamp(160px, 28vw, 396px);
+  max-width: none;
+}
+@keyframes scroll-left-3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+/* 폰트/제목 유동 크기 (데스크톱 최대값은 기존과 동일) */
+#page-4 > h2 {
+  font-size: clamp(2.6rem, 8vw, 80px);
+}
+#page-5 > div > h1 {
+  font-size: clamp(2.6rem, 7vw, 4.5rem);
+}
+#final-page h2 {
+  font-size: clamp(2.6rem, 8vw, 97px);
+}
+.section-up {
+  margin-top: clamp(2.5rem, 12vh, 177px);
+}
+.section-bottom {
+  margin-top: clamp(2rem, 8vh, 116px);
+}
+#final-page .section-bottom span {
+  font-size: clamp(1.1rem, 3.6vw, 34px);
+}
+
+/* =========================================================
+   태블릿 / 모바일  (≤ 1024px)
+   ========================================================= */
+@media (max-width: 1024px) {
+  /* 우측 하단 고정 헤더는 모바일에서 숨김 (기존 동작 유지) */
+  .header {
+    display: none;
+  }
+
+  /* ----- page-1 : About me ----- */
+  .page-1 {
+    height: auto;
+    min-height: 100dvh;
+    padding: 3rem 1.25rem;
+  }
+  .Eden-parent {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+  }
+  .Eden-parent > .Eden-detail {
+    flex: none;
+    width: 100%;
+    padding: 0;
+    gap: 1.5rem;
+  }
+  .Eden-parent > .Eden-detail > h1 {
+    font-size: clamp(3rem, 12vw, 5.6rem);
+  }
+  .Eden-detail img {
+    width: min(70vw, 320px);
+    height: auto;
+    display: block;
+  }
+  .Eden-detail > .info > .name {
+    font-size: clamp(2.2rem, 9vw, 3.9rem);
+  }
+  .Eden-detail > .info > .info-detail {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+
+  .Rightbx {
+    flex: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.5rem;
+    font-size: 1.6rem;
+  }
+  .Rightbx > .right-area1,
+  .right-area2 {
+    flex: none;
+    width: 100%;
+    margin-top: 0;
+    gap: 2rem;
+  }
+  .education h1,
+  .license h1,
+  .sofware-list h1 {
+    font-size: clamp(2rem, 8vw, 3.4rem);
+  }
+  .education ul li,
+  .license li {
+    font-size: clamp(1.1rem, 4.6vw, 2rem);
+    margin-bottom: 0.6rem;
+  }
+  .education span,
+  .license span {
+    font-size: clamp(1rem, 3.6vw, 1.6rem);
+  }
+
+  /* 소프트웨어 리스트: 이름 | 게이지 를 2열 그리드로 정렬 */
+  .sofware-list {
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    font-size: clamp(1.1rem, 4.4vw, 1.6rem);
+  }
+  .sofware-list h1::after {
+    display: none;
+  }
+  .figma,
+  .Illustrator,
+  .Photoshop {
+    display: grid;
+    grid-template-columns: 6.5em 1fr;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+  }
+  .figma-gauge-bx,
+  .illustrator-gauge-bx,
+  .photoshop-gauge-bx {
+    left: 0;
+    width: 100%;
+  }
+  .other-skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+  }
+  .other-skill a img {
+    width: clamp(40px, 12vw, 56px);
+    height: auto;
+  }
+
+  /* ----- page-3 : RunCanvas ----- */
+  .page-3 {
+    height: auto;
+    min-height: 100dvh;
+    padding: 3rem 1.25rem;
+  }
+  .page-3 .runcanvas {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .runcanvas > ul {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .page-3 ul > li {
+    position: static;
+    width: min(70%, 320px);
+    margin: 0;
+    top: auto;
+    left: auto;
+  }
+  /* hover 로 나타나는 2번째 이미지는 터치 기기에서 빈 공간만 차지 → 숨김 */
+  .page-3 ul > li:nth-child(2) {
+    display: none;
+  }
+  .page-3 ul > li img {
+    width: 100%;
+    height: auto;
+  }
+  .runcanvas > div {
+    width: 100%;
+    padding: 0.5rem 0;
+    gap: 1rem;
+    text-align: left;
+  }
+  .page-3 div {
+    font-size: clamp(0.95rem, 3.8vw, 1.25rem);
+  }
+  .runcanvas-T h1 {
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
+  }
+  .runcanvas-abt {
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+  }
+  .runcanvas-abt span:nth-child(1)::after {
+    display: none;
+  }
+  .page-3 .runcanvas-info {
+    margin-bottom: 1rem;
+    word-break: keep-all;
+  }
+  /* HTML 에 하드코딩된 <br> 은 모바일에서 어색하게 끊기므로 무시 */
+  .page-3 .runcanvas-info br {
+    display: none;
+  }
+  .runcanvas .button-group {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: inherit;
+  }
+  .runcanvas .button-group a {
+    flex: 1 1 140px;
+    text-align: center;
+    padding: 0.7rem 1rem;
+  }
+
+  /* ----- page-4 : Coding ----- */
+  #page-4 {
+    height: auto;
+    padding: 3rem 1.25rem 4rem;
+  }
+  #page-4 > h2 {
+    padding: 0 0 1rem;
+    margin-bottom: 0;
+  }
+  .card-wrapper {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 1rem;
+  }
+  .card-wrapper .card1 .card-box,
+  .card-wrapper .card2 .card-box,
+  .card-wrapper .card3 .card-box {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+  .card-wrapper .card1 .card-labels,
+  .card-wrapper .card2 .card-labels,
+  .card-wrapper .card3 .card-labels {
+    gap: 0.6rem;
+  }
+  .card1 .card-labels a,
+  .card2 .card-labels a,
+  .card3 .card-labels a {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    padding: 0.6rem 1rem;
+  }
+
+  /* ----- page-5 : Design ----- */
+  #page-5 {
+    height: auto;
+    min-height: 0;
+    padding: 3rem 0 4rem;
+    gap: 1.5rem;
+  }
+  #page-5 > div {
+    padding: 0 1.25rem;
+  }
+
+  /* ----- final page ----- */
+  #final-page {
+    height: auto;
+    min-height: 100dvh;
+    padding: 3rem 1.25rem;
+    justify-content: center;
+  }
+  #final-page .section-bottom span {
+    margin-bottom: 0.6rem;
+  }
+  #final-page .section-bottom span:nth-child(3) {
+    margin-top: 1.5rem;
+  }
+}
+
+/* =========================================================
+   작은 모바일  (≤ 600px) : 구름 배치만 별도 지정
+   ========================================================= */
+@media (max-width: 600px) {
+  .main-page {
+    min-height: 520px;
+  }
+  .main-page > div > ul > li:nth-child(1) {
+    width: 62%;
+    top: 5%;
+    left: 3%;
+  }
+  .main-page > div > ul > li:nth-child(2) {
+    width: 58%;
+    top: 18%;
+    left: 42%;
+  }
+  .main-page > div > ul > li:nth-child(3) {
+    width: 70%;
+    top: 62%;
+    left: 28%;
+  }
+  .main-page > div > ul > li:nth-child(4) {
+    width: 32%;
+    top: 74%;
+    left: 4%;
+  }
+}
+
+/* 모션 최소화 설정을 켠 사용자 배려 */
+@media (prefers-reduced-motion: reduce) {
+  #page-5 .design-gallery,
+  .carousel,
+  .main-page > div > ul > li {
+    animation: none;
+  }
+}
+
+/* =========================================================
+   디자인 갤러리: 터치/모바일에서는 자동 애니메이션 대신 손가락 슬라이드
+   (PC 마우스 환경은 기존 자동 마퀴 유지)
+   ========================================================= */
+@media (hover: none), (pointer: coarse), (max-width: 1024px), (prefers-reduced-motion: reduce) {
+  #page-5 .marquee-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    padding: 0 1.25rem;
+    scrollbar-width: none; /* Firefox */
+  }
+  #page-5 .marquee-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  #page-5 .marquee-wrapper .design-gallery {
+    animation: none;
+    transform: none;
+    width: max-content;
+    padding-right: 1.25rem;
+  }
+  #page-5 .marquee-wrapper .design-gallery a {
+    flex: 0 0 auto;
+  }
+
+  /* 3번째 복제 세트(21번째 이후)만 숨김. 1·2세트는 JS 무한 루프용으로 사용 */
+  #page-5 .marquee-wrapper .design-gallery a:nth-child(n + 21) {
+    display: none;
+  }
+}
