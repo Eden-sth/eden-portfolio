@@ -49,3 +49,8 @@ function animateCircles() {
 }
 
 animateCircles();
+
+// 모바일 화면 터치 마우스커서 이벤트 제거
+if (!window.matchMedia("(hover: none)").matches) {
+  animateCircles();
+}
