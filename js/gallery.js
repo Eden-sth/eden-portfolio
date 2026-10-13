@@ -5,8 +5,8 @@
   const gallery = wrapper && wrapper.querySelector(".design-gallery");
   if (!wrapper || !gallery) return;
 
-  const SPEED = 50; // px/초 (자동 이동 속도)
-  const RESUME_DELAY = 1800; // ms (손 뗀 뒤 재생까지 대기)
+  const SPEED = 65; // px/초 (자동 이동 속도)
+  const RESUME_DELAY = 1000; // ms (손 뗀 뒤 재생까지 대기)
   const SET_SIZE = 10; // 이미지 1세트 개수 (HTML 의 복제 단위)
 
   // CSS 의 슬라이드 모드 조건과 동일하게 맞춤

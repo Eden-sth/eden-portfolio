@@ -240,21 +240,38 @@ body {
     gap: 1.5rem;
   }
   .runcanvas > ul {
-    position: static;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    display: block;
+    width: min(100%, 380px);
+    margin: 0 auto;
   }
+  /* 두 이미지를 대각선으로 겹치기: 1번은 좌상단, 2번은 우하단으로 살짝 걸침 */
   .page-3 ul > li {
-    position: static;
-    width: min(70%, 320px);
+    position: relative;
+    width: 62%;
     margin: 0;
     top: auto;
     left: auto;
   }
-  /* hover 로 나타나는 2번째 이미지는 터치 기기에서 빈 공간만 차지 → 숨김 */
   .page-3 ul > li:nth-child(2) {
-    display: none;
+    top: auto; /* style.css 의 top/left/opacity 값을 확실히 덮어씀 */
+    left: auto;
+    opacity: 1;
+    margin-left: 25%; /* 이미지 간격 조절 가로*/
+    margin-top: -85%; /* % 는 ul 너비 기준 → 이미지 비율과 무관하게 겹침 정도 유지 */
+    z-index: 2;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
+  }
+  /* 2번째 이미지: PC 는 hover, 모바일은 스크롤해서 화면에 들어오면 나타남.
+     (reveal.js 가 .reveal-ready / .is-visible 클래스를 붙임. JS 가 없으면 그냥 보임) */
+  .page-3.reveal-ready ul > li:nth-child(2) {
+    opacity: 0;
+    transform: translate(24px, 40px); /* 대각선 방향으로 슬라이드 인 */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .page-3.reveal-ready ul > li:nth-child(2).is-visible {
+    opacity: 1;
+    transform: none;
   }
   .page-3 ul > li img {
     width: 100%;
@@ -425,5 +442,12 @@ body {
   /* 3번째 복제 세트(21번째 이후)만 숨김. 1·2세트는 JS 무한 루프용으로 사용 */
   #page-5 .marquee-wrapper .design-gallery a:nth-child(n + 21) {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) and (prefers-reduced-motion: reduce) {
+  .page-3.reveal-ready ul > li:nth-child(2) {
+    transition: none;
+    transform: none;
   }
 }
